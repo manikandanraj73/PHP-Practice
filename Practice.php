@@ -79,7 +79,8 @@ var_dump(isset($booking["price"]));
 //     if($key=="seats"){
 //         $st="";
 //         for($i= 0;$i<count($value);$i++){
-//           $st .= "[$value[$i]] ";
+//  
+        //  $st .= "[$value[$i]] ";
 //         }
 //         $value=$st;
 //     }
