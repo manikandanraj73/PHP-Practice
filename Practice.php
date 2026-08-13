@@ -74,7 +74,6 @@ $booking=[
     "price"=>200,
     "seats"=>["A1","A2"]
 ];
-var_dump(isset($booking["price"]));
 // foreach ($booking as $key => $value) {
 //     if($key=="seats"){
 //         $st="";
@@ -100,4 +99,23 @@ for ($i= 0; $i<count($nums)-1; $i++){
 // foreach($nums as $num){
 //     echo"$num\n";
 // }
+$sentence= "hello guys how are u";
+$arr=explode(" ",$sentence);
+// foreach($arr as $value){
+// echo"$value\n";
+// }
+
+// while (true){
+// $random_value= rand(1,10);
+// echo"Enter the Number b/w 1 - 10 : ";
+// $inp=readline();
+// if($inp== $random_value){
+//     echo "Won !....";
+//     break;
+// }
+// echo"Miss try again correct ans is $random_value \n";
+// }
+
+$isTrue=true;
+var_dump($isTrue);
 ?>
