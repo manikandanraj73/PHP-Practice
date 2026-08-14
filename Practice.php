@@ -142,16 +142,16 @@
 // $unique=array_unique($c);
 // echo"uniqu: ";print_r($unique);
 
-$nums = [1,4,3,42];
-print_r($nums);
-$map=array_map(fn($v)=>$v*2,$nums);
-echo"Map\n";
-print_r($map);
-$filter=array_filter($nums,fn($v)=>$v%2==0);
-echo"Filter\n";
-print_r($filter);
-$reduce=array_reduce($nums,fn($total,$value)=>$total+$value,0);
-echo"Reduce : $reduce\n";
+// $nums = [1,4,3,42];
+// print_r($nums);
+// $map=array_map(fn($v)=>$v*2,$nums);
+// echo"Map\n";
+// print_r($map);
+// $filter=array_filter($nums,fn($v)=>$v%2==0);
+// echo"Filter\n";
+// print_r($filter);
+// $reduce=array_reduce($nums,fn($total,$value)=>$total+$value,0);
+// echo"Reduce : $reduce\n";
 
 // // MATH BUILT-IN FUNCTIONS
 // echo "absolute : ".abs(-10.5)."\n";
@@ -201,6 +201,17 @@ echo"Reduce : $reduce\n";
 // $func2($num);
 // echo $num;
 
+ $booking=[
+    "movieName"=>"Citizen",
+    "Date"=>"15-08-2026",
+    "price"=>200,
+    "seats"=>["A1","A2"]
+];
+print_r($booking);
+$json=json_encode($booking);
+echo $json;
+$object=json_decode($json,true);
+print_r($object);
 // class Booking{
 //    private string $name;
 //    private int $price;
