@@ -142,6 +142,17 @@
 // $unique=array_unique($c);
 // echo"uniqu: ";print_r($unique);
 
+$nums = [1,4,3,42];
+print_r($nums);
+$map=array_map(fn($v)=>$v*2,$nums);
+echo"Map\n";
+print_r($map);
+$filter=array_filter($nums,fn($v)=>$v%2==0);
+echo"Filter\n";
+print_r($filter);
+$reduce=array_reduce($nums,fn($total,$value)=>$total+$value,0);
+echo"Reduce : $reduce\n";
+
 // // MATH BUILT-IN FUNCTIONS
 // echo "absolute : ".abs(-10.5)."\n";
 // echo "round : ".round(10.6)."\n";
@@ -190,82 +201,82 @@
 // $func2($num);
 // echo $num;
 
-class Booking{
-   private string $name;
-   private int $price;
-   private String $date;
+// class Booking{
+//    private string $name;
+//    private int $price;
+//    private String $date;
 
-   public static $theatre="Vijaya cinema's";
+//    public static $theatre="Vijaya cinema's";
 
-   public function setName(string $name) {
-    $this->name= $name;
-   }
-   public function setPrice(int $price) {
-    $this->price= $price;
-   }
-   public function setDate(string $date) {
-    $this->date= $date;
-   }
+//    public function setName(string $name) {
+//     $this->name= $name;
+//    }
+//    public function setPrice(int $price) {
+//     $this->price= $price;
+//    }
+//    public function setDate(string $date) {
+//     $this->date= $date;
+//    }
 
-   public function getName(){
-    return $this->name;
-   }
-   public function getPrice(){
-    return $this->price;
-   }
-   public function getDate(){
-    return $this->date;
-   }
+//    public function getName(){
+//     return $this->name;
+//    }
+//    public function getPrice(){
+//     return $this->price;
+//    }
+//    public function getDate(){
+//     return $this->date;
+//    }
    
 
 
-   public function __construct(string $name="undefined", int $price=0, String $date="-----"){
-    $this->name= $name;
-    $this->price= $price;
-    $this->date= $date;
-   }
+//    public function __construct(string $name="undefined", int $price=0, String $date="-----"){
+//     $this->name= $name;
+//     $this->price= $price;
+//     $this->date= $date;
+//    }
 
-   function details(){
-    echo"from parent class\n";
-    echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
-  echo "-------------------------------------------------------------------\n";
-    }
+//    function details(){
+//     echo"from parent class\n";
+//     echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
+//   echo "-------------------------------------------------------------------\n";
+//     }
 
-}
+// }
 
-class TamilMovie extends Booking{
-    public static function greet(){
-        echo "hii bro ";
-    }
+// class TamilMovie extends Booking{
+//     public static function greet(){
+//         echo "hii bro ";
+//     }
 
-function details(){
-    echo "from child class\n";
-    parent::__construct($this->getName(), $this->getPrice(), $this->getDate());
-    echo   "Name : ".$this->getName()." \nPrice : ".$this->getPrice()."\nDate : ".$this->getDate() ."\nThanks for Booking....\n";
-     echo "-------------------------------------------------------------------\n";
+// function details(){
+//     echo "from child class\n";
+//     parent::__construct($this->getName(), $this->getPrice(), $this->getDate());
+//     echo   "Name : ".$this->getName()." \nPrice : ".$this->getPrice()."\nDate : ".$this->getDate() ."\nThanks for Booking....\n";
+//      echo "-------------------------------------------------------------------\n";
 
-    }
-}
-$booking = new Booking();
-echo  Booking ::$theatre. "\n";
-$booking-> setName( "Eko") ;
-$booking->setPrice( 150) ;
-$booking->setDate("15/08/2026") ;
+//     }
+// }
+// $booking = new Booking();
+// echo  Booking ::$theatre. "\n";
+// $booking-> setName( "Eko") ;
+// $booking->setPrice( 150) ;
+// $booking->setDate("15/08/2026") ;
 
-$booking2 = new Booking();
-$booking2-> setName( "Sprider Man") ;
-$booking2->setPrice( 200) ;
-$booking2->setDate("15/08/2026") ;
+// $booking2 = new Booking();
+// $booking2-> setName( "Sprider Man") ;
+// $booking2->setPrice( 200) ;
+// $booking2->setDate("15/08/2026") ;
 
-$booking3 = new Booking("LEO",120,"14/08/2026");
+// $booking3 = new Booking("LEO",120,"14/08/2026");
 
-$tamilMovie= new TamilMovie("Sitaramam",200,"15/08/2026");
+// $tamilMovie= new TamilMovie("Sitaramam",200,"15/08/2026");
 
-$booking->details();
-$booking2->details();
-$booking3->details();
-$tamilMovie->details();
+// $booking->details();
+// $booking2->details();
+// $booking3->details();
+// $tamilMovie->details();
 
-TamilMovie::greet();
+// TamilMovie::greet();
 
 ?>
