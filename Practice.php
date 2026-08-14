@@ -158,11 +158,23 @@ $arr=explode(" ",$sentence);
 // echo "is null : ".is_null(null)."\n";
 
 // DATE TIME
-echo"date : ".date("d-m-Y")."\n";
-echo"time : ".time()."\n";
-echo"str to date : ".strtotime("17 August 2026")."\n";
-$date=strtotime("17 August 2026");
-echo"date using timestamp : ".date("d-m-Y",$date)."\n";
+// echo"date : ".date("d-m-Y")."\n";
+// echo"time : ".time()."\n";
+// echo"str to date : ".strtotime("17 August 2026")."\n";
+// $date=strtotime("17 August 2026");
+// echo"date using timestamp : ".date("d-m-Y",$date)."\n";
+
+// function add($a,$b){
+//     return $a+$b;
+// }
 
 
+// $add = function ($a,$b){
+//     return $a+$b;
+// };
+// echo"Answer: ".$add(2,3);
+
+// $add=fn($a)=>$a*2;
+
+// echo"result : ".$add(47);
 ?>
