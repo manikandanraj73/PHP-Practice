@@ -195,6 +195,8 @@ class Booking{
    private int $price;
    private String $date;
 
+   public static $theatre="Vijaya cinema's";
+
    public function setName(string $name) {
     $this->name= $name;
    }
@@ -224,12 +226,28 @@ class Booking{
    }
 
    function details(){
+    echo"from parent class\n";
     echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
-   }
+  echo "-------------------------------------------------------------------\n";
+    }
 
 }
 
+class TamilMovie extends Booking{
+    public static function greet(){
+        echo "hii bro ";
+    }
+
+function details(){
+    echo "from child class\n";
+    parent::__construct($this->getName(), $this->getPrice(), $this->getDate());
+    echo   "Name : ".$this->getName()." \nPrice : ".$this->getPrice()."\nDate : ".$this->getDate() ."\nThanks for Booking....\n";
+     echo "-------------------------------------------------------------------\n";
+
+    }
+}
 $booking = new Booking();
+echo  Booking ::$theatre. "\n";
 $booking-> setName( "Eko") ;
 $booking->setPrice( 150) ;
 $booking->setDate("15/08/2026") ;
@@ -241,9 +259,13 @@ $booking2->setDate("15/08/2026") ;
 
 $booking3 = new Booking("LEO",120,"14/08/2026");
 
+$tamilMovie= new TamilMovie("Sitaramam",200,"15/08/2026");
+
 $booking->details();
 $booking2->details();
 $booking3->details();
+$tamilMovie->details();
 
+TamilMovie::greet();
 
 ?>
