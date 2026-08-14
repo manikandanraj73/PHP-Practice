@@ -191,26 +191,59 @@
 // echo $num;
 
 class Booking{
-   public string $name;
-   public int $price;
-   public String $date;
+   private string $name;
+   private int $price;
+   private String $date;
+
+   public function setName(string $name) {
+    $this->name= $name;
+   }
+   public function setPrice(int $price) {
+    $this->price= $price;
+   }
+   public function setDate(string $date) {
+    $this->date= $date;
+   }
+
+   public function getName(){
+    return $this->name;
+   }
+   public function getPrice(){
+    return $this->price;
+   }
+   public function getDate(){
+    return $this->date;
+   }
+   
+
+
+   public function __construct(string $name="undefined", int $price=0, String $date="-----"){
+    $this->name= $name;
+    $this->price= $price;
+    $this->date= $date;
+   }
 
    function details(){
-    echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....";
+    echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
    }
 
 }
 
 $booking = new Booking();
-$booking->name = "Eko";
-$booking->price = 150;
-$booking->date = "15/08/2026";
+$booking-> setName( "Eko") ;
+$booking->setPrice( 150) ;
+$booking->setDate("15/08/2026") ;
 
 $booking2 = new Booking();
-$booking2->name = "Sprider Man";
-$booking2->price = 200;
-$booking2->date = "15/08/2026";
+$booking2-> setName( "Sprider Man") ;
+$booking2->setPrice( 200) ;
+$booking2->setDate("15/08/2026") ;
+
+$booking3 = new Booking("LEO",120,"14/08/2026");
 
 $booking->details();
+$booking2->details();
+$booking3->details();
+
 
 ?>
