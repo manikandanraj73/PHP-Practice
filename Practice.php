@@ -113,9 +113,56 @@ $arr=explode(" ",$sentence);
 //     echo "Won !....";
 //     break;
 // }
-// echo"Miss try again correct ans is $random_value \n";
+// echo"Miss try again correct ans is $random_value \n";        
 // }
 
-$isTrue=true;
-var_dump($isTrue);
+// print_r($arr);
+// STRING BUILT-IN FUNCTIONS
+// $name="Manikandan ";
+// echo"$name\n";
+// echo"length: ".strlen($name)."\n";
+// echo"upper: ".strtoupper($name)."\n";
+// echo"lower: ".strtolower($name)."\n"; 
+// echo"trim: ".trim($name)."\n"; 
+// echo"replace: ".str_replace("kandan","sh Pandey",$name)."\n"; 
+// echo"position find: ".strpos($name,"kandan")."\n"; 
+// echo"sub str: ".substr($name,0,4)."\n"; 
+
+// ARRAY BUILT-IN FUNCTIONS
+// $a=["a","b","c"];
+// echo"implode: ".implode(", ",$a)."\n"; 
+// echo"count: ".count($a)."\n"; 
+// echo"in - array: ".in_array("b",$a)."\n"; 
+// echo"array key exists: ".array_key_exists("seats",$booking)."\n"; 
+// array_pop($a);
+// print_r($a);
+// $b=["d","e","f","a"];
+// $c=array_merge($a,$b);
+// echo"array merge: ".print_r($c)."\n"; 
+// $unique=array_unique($c);
+// echo"uniqu: ";print_r($unique);
+
+// MATH BUILT-IN FUNCTIONS
+// echo "absolute : ".abs(-10.5)."\n";
+// echo "round : ".round(10.6)."\n";
+// echo "ceil always upward : ".ceil(10.2)."\n";
+// echo "floor always dounward : ".floor(10.6)."\n";
+// echo "max : ".max(10.6,10,20)."\n";
+// echo "min : ".min(10.6,10,-10,-1)."\n";
+// echo "gettype : ".gettype("hii")."\n";
+// echo "is string : ".is_string("hii")."\n";
+// echo "is int : ".is_int("hii")."\n";
+// echo "is array : ".is_array($booking)."\n";
+// echo "is boolean : ".is_bool(false)."\n";
+// echo "is float : ".is_float(1.5)."\n";
+// echo "is null : ".is_null(null)."\n";
+
+// DATE TIME
+echo"date : ".date("d-m-Y")."\n";
+echo"time : ".time()."\n";
+echo"str to date : ".strtotime("17 August 2026")."\n";
+$date=strtotime("17 August 2026");
+echo"date using timestamp : ".date("d-m-Y",$date)."\n";
+
+
 ?>
