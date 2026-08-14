@@ -190,4 +190,27 @@
 // $func2($num);
 // echo $num;
 
+class Booking{
+   public string $name;
+   public int $price;
+   public String $date;
+
+   function details(){
+    echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....";
+   }
+
+}
+
+$booking = new Booking();
+$booking->name = "Eko";
+$booking->price = 150;
+$booking->date = "15/08/2026";
+
+$booking2 = new Booking();
+$booking2->name = "Sprider Man";
+$booking2->price = 200;
+$booking2->date = "15/08/2026";
+
+$booking->details();
+
 ?>
