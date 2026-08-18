@@ -201,17 +201,25 @@
 // $func2($num);
 // echo $num;
 
- $booking=[
-    "movieName"=>"Citizen",
-    "Date"=>"15-08-2026",
-    "price"=>200,
-    "seats"=>["A1","A2"]
-];
-print_r($booking);
-$json=json_encode($booking);
-echo $json;
-$object=json_decode($json,true);
-print_r($object);
+//  $booking=[
+//     "movieName"=>"Citizen",
+//     "date"=>"15-08-2026",
+//     "price"=>200,
+//     "seats"=>["A1","A2"]
+// ];
+// print_r($booking);
+// $json=json_encode($booking);
+// echo $json;
+// $array=json_decode($json,true);
+// print_r($array);
+
+// $object=json_decode($json);
+// echo "name:".$object->movieName;
+// echo"\n";
+// echo "Date:".$object->date."\n";
+// echo "Price:".$object->price."\n";
+// print_r($object);
+
 // class Booking{
 //    private string $name;
 //    private int $price;
@@ -289,5 +297,21 @@ print_r($object);
 // $tamilMovie->details();
 
 // TamilMovie::greet();
+
+trait Log{
+    public function log(){
+    echo"loginng";
+    }
+    public function log2(){
+    echo"loginng 2";
+    }
+}
+class PaymentGateWay{
+    use Log;
+}   
+
+$obj= new PaymentGateWay();
+$obj-> log2();
+
 
 ?>
