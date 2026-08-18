@@ -28,6 +28,7 @@ class Booking{
        echo"Booking confirmed\n";
        
     }
+    
 }
 $payment=new Payment();
 $booking=new Booking($payment);
