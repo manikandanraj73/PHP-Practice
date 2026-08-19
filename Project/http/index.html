@@ -6,8 +6,8 @@
     <title><Form></Form></title>
 </head>
 <body>
-    <h2>Practice</h2>
-    <form action="login.php" method="post">
+    <h2>LOGIN</h2>
+    <form id="loginForm">
     <label for="name">User Name </label>
     <input type="text" name="name" id="name">
     <br><br>
@@ -17,6 +17,21 @@
    
     <button type="submit">Login </button>
     </form>
+
+    <p id="result"></p>
 </body>
+<script>
+    document.getElementById("loginForm").addEventListener("submit",async function (e) {
+        e.preventDefault();
+        const formData= new FormData(this);
+        const res= await fetch("login.php",{
+            method: "POST",
+            body: formData
+        });
+        const data = await res.json();
+        console.log(data);
+        document.getElementById("result").innerText = data.Status;
+    });
+</script>
 
 </html>
