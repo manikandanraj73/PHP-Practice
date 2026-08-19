@@ -1,16 +1,7 @@
 <?php
 
 
-    $users=[
-        [
-            "userName"=>"mani",
-            "password"=> "mani123",
-        ],
-         [
-            "userName"=>"ram",
-            "password"=> "ram123",
-        ]
-    ];
+    
 
 
 if($_SERVER["REQUEST_METHOD"]==="POST"&&!empty($_POST["name"])&&!empty($_POST["age"])&&!empty($_POST["city"])){
