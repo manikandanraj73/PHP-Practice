@@ -14,6 +14,8 @@ echo"AGE : ".$age."\n<br>";
 echo"CITY : ".$city."\n<br>";
 }
 else{
+
+
     echo"fill the all details";
 }
 ?>
