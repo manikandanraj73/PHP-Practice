@@ -1,302 +1,302 @@
 <?php
-$name = "Manikandan";
-echo "hi $name \n";
-for($i=1;$i<=10;$i++){
-    echo $i ."\n";
-}
-
-
-echo"Enter the number :";
-$age = readline();
-if($age < 18){
-echo"<";
-}
-elseif($age > 18){
-    echo ">";}
-    elseif($age == 18){
-    echo "18";}
-
-var_dump("0" > 0);
-var_dump("0" == 0);
-
-var_dump("m" > 0);
-var_dump("m" == 0);
-
-echo"Enter Number : ";
-$num = readline();
-
-if(is_numeric($num) && $num >0) {
-    for($i = 1; $i <=10; $i++) {
-        echo "$i X $num = ".$num*$i."\n";
-    }
-
-}
-else{
-    echo "Enter the Numbers only";
-}
-
-$languages=["c","cpp","java","php"];
-for($i= 0; $i<count($languages); $i++){
-    echo($languages[$i]);
-}
-$languages[]= "python";
-echo($languages[4]);
-
-$nums=[1,2,3,4];
-for($i=0;$i<count($nums);$i++){
-    if($nums[$i]===3){
-        continue;
-    }
-    echo $nums[$i]."\n";
-}
-
-$employee=[
-    "name"=>"mani",
-    "age"=>22,
-    "mStatus"=>false,
-    "height"=>5.8
-];
-echo"\n$employee[name]\n";
-echo"$employee[age]\n";
-echo"$employee[mStatus]\n";
-echo"$employee[height]";
-
-foreach($employee as $k=>$v){
-    if($v===false){
-      $v="'false'";
-    }
-    echo "$k = $v\n";
-}
-
-$booking=[
-    "movieName"=>"Citizen",
-    "Date"=>"15/08/2026",
-    "price"=>200,
-    "seats"=>["A1","A2"]
-];
-foreach ($booking as $key => $value) {
-    if($key=="seats"){
-        $st="";
-        for($i= 0;$i<count($value);$i++){
- 
-         $st .= "[$value[$i]] ";
-        }
-        $value=$st;
-    }
-    echo"$key = $value\n";
+// $name = "Manikandan";
+// echo "hi $name \n";
+// for($i=1;$i<=10;$i++){
+//     echo $i ."\n";
 // }
-$nums=[1,2,3,4,9,8];
-
-for ($i= 0; $i<count($nums)-1; $i++){
-    for ($j= $i+1; $j<count($nums); $j++){
-    if($nums[$i] < $nums[$j]){
-    $temp=$nums[$i];
-    $nums[$i] = $nums[$j];
-    $nums[$j] = $temp;
-    }
-}
-}
-foreach($nums as $num){
-    echo"$num\n";
-}
-$sentence= "hello guys how are u";
-$arr=explode(" ",$sentence);
-foreach($arr as $value){
-echo"$value\n";
-}
-
-while (true){
-$random_value= rand(1,10);
-echo"Enter the Number b/w 1 - 10 : ";
-$inp=readline();
-if($inp== $random_value){
-    echo "Won !....";
-    break;
-}
-echo"Miss try again correct ans is $random_value \n";        
-}
-
-print_r($arr);
-// STRING BUILT-IN FUNCTIONS
-$name="Manikandan ";
-echo"$name\n";
-echo"length: ".strlen($name)."\n";
-echo"upper: ".strtoupper($name)."\n";
-echo"lower: ".strtolower($name)."\n"; 
-echo"trim: ".trim($name)."\n"; 
-echo"replace: ".str_replace("kandan","sh Pandey",$name)."\n"; 
-echo"position find: ".strpos($name,"kandan")."\n"; 
-echo"sub str: ".substr($name,0,4)."\n"; 
-
-// ARRAY BUILT-IN FUNCTIONS
-$a=["a","b","c"];
-echo"implode: ".implode(", ",$a)."\n"; 
-echo"count: ".count($a)."\n"; 
-echo"in - array: ".in_array("b",$a)."\n"; 
-echo"array key exists: ".array_key_exists("seats",$booking)."\n"; 
-array_pop($a);
-print_r($a);
-$b=["d","e","f","a"];
-$c=array_merge($a,$b);
-echo"array merge: ".print_r($c)."\n"; 
-$unique=array_unique($c);
-echo"uniqu: ";print_r($unique);
-
-$nums = [1,4,3,42];
-print_r($nums);
-$map=array_map(fn($v)=>$v*2,$nums);
-echo"Map\n";
-print_r($map);
-$filter=array_filter($nums,fn($v)=>$v%2==0);
-echo"Filter\n";
-print_r($filter);
-$reduce=array_reduce($nums,fn($total,$value)=>$total+$value,0);
-echo"Reduce : $reduce\n";
-
-// MATH BUILT-IN FUNCTIONS
-echo "absolute : ".abs(-10.5)."\n";
-echo "round : ".round(10.6)."\n";
-echo "ceil always upward : ".ceil(10.2)."\n";
-echo "floor always dounward : ".floor(10.6)."\n";
-echo "max : ".max(10.6,10,20)."\n";
-echo "min : ".min(10.6,10,-10,-1)."\n";
-echo "gettype : ".gettype("hii")."\n";
-echo "is string : ".is_string("hii")."\n";
-echo "is int : ".is_int("hii")."\n";
-echo "is array : ".is_array($booking)."\n";
-echo "is boolean : ".is_bool(false)."\n";
-echo "is float : ".is_float(1.5)."\n";
-echo "is null : ".is_null(null)."\n";
-
-// DATE TIME
-echo"date : ".date("d-m-Y")."\n";
-echo"time : ".time()."\n";
-echo"str to date : ".strtotime("17 August 2026")."\n";
-$date=strtotime("17 August 2026");
-echo"date using timestamp : ".date("d-m-Y",$date)."\n";
-
-function add($a,$b){
-    return $a+$b;
-}
 
 
-$add = function ($a,$b){
-    return $a+$b;
-};
-echo"Answer: ".$add(2,3);
+// echo"Enter the number :";
+// $age = readline();
+// if($age < 18){
+// echo"<";
+// }
+// elseif($age > 18){
+//     echo ">";}
+//     elseif($age == 18){
+//     echo "18";}
 
-$addd=fn($a)=>$a*2;
+// var_dump("0" > 0);
+// var_dump("0" == 0);
 
-echo"result : ".$addd(47);
+// var_dump("m" > 0);
+// var_dump("m" == 0);
 
-pass by value
-$func=fn($a)=> $a=100;
-$num = 5;
-$func($num);
-echo $num."\n";
+// echo"Enter Number : ";
+// $num = readline();
 
-pass by reference
-$func2=fn(&$a)=> $a=100;
-$num = 5;
-$func2($num);
-echo $num;
+// if(is_numeric($num) && $num >0) {
+//     for($i = 1; $i <=10; $i++) {
+//         echo "$i X $num = ".$num*$i."\n";
+//     }
 
- $booking=[
-    "movieName"=>"Citizen",
-    "date"=>"15-08-2026",
-    "price"=>200,
-    "seats"=>["A1","A2"]
-];
-print_r($booking);
-$json=json_encode($booking);
-echo $json;
-$array=json_decode($json,true);
-print_r($array);
+// }
+// else{
+//     echo "Enter the Numbers only";
+// }
 
-$object=json_decode($json);
-echo "name:".$object->movieName;
-echo"\n";
-echo "Date:".$object->date."\n";
-echo "Price:".$object->price."\n";
-print_r($object);
+// $languages=["c","cpp","java","php"];
+// for($i= 0; $i<count($languages); $i++){
+//     echo($languages[$i]);
+// }
+// $languages[]= "python";
+// echo($languages[4]);
 
-class Booking{
-   private string $name;
-   private int $price;
-   private String $date;
+// $nums=[1,2,3,4];
+// for($i=0;$i<count($nums);$i++){
+//     if($nums[$i]===3){
+//         continue;
+//     }
+//     echo $nums[$i]."\n";
+// }
 
-   public static $theatre="Vijaya cinema's";
+// $employee=[
+//     "name"=>"mani",
+//     "age"=>22,
+//     "mStatus"=>false,
+//     "height"=>5.8
+// ];
+// echo"\n$employee[name]\n";
+// echo"$employee[age]\n";
+// echo"$employee[mStatus]\n";
+// echo"$employee[height]";
 
-   public function setName(string $name) {
-    $this->name= $name;
-   }
-   public function setPrice(int $price) {
-    $this->price= $price;
-   }
-   public function setDate(string $date) {
-    $this->date= $date;
-   }
+// foreach($employee as $k=>$v){
+//     if($v===false){
+//       $v="'false'";
+//     }
+//     echo "$k = $v\n";
+// }
 
-   public function getName(){
-    return $this->name;
-   }
-   public function getPrice(){
-    return $this->price;
-   }
-   public function getDate(){
-    return $this->date;
-   }
+// $booking=[
+//     "movieName"=>"Citizen",
+//     "Date"=>"15/08/2026",
+//     "price"=>200,
+//     "seats"=>["A1","A2"]
+// ];
+// foreach ($booking as $key => $value) {
+//     if($key=="seats"){
+//         $st="";
+//         for($i= 0;$i<count($value);$i++){
+ 
+//          $st .= "[$value[$i]] ";
+//         }
+//         $value=$st;
+//     }
+//     echo"$key = $value\n";
+// // }
+// $nums=[1,2,3,4,9,8];
+
+// for ($i= 0; $i<count($nums)-1; $i++){
+//     for ($j= $i+1; $j<count($nums); $j++){
+//     if($nums[$i] < $nums[$j]){
+//     $temp=$nums[$i];
+//     $nums[$i] = $nums[$j];
+//     $nums[$j] = $temp;
+//     }
+// }
+// }
+// foreach($nums as $num){
+//     echo"$num\n";
+// }
+// $sentence= "hello guys how are u";
+// $arr=explode(" ",$sentence);
+// foreach($arr as $value){
+// echo"$value\n";
+// }
+
+// while (true){
+// $random_value= rand(1,10);
+// echo"Enter the Number b/w 1 - 10 : ";
+// $inp=readline();
+// if($inp== $random_value){
+//     echo "Won !....";
+//     break;
+// }
+// echo"Miss try again correct ans is $random_value \n";        
+// }
+
+// print_r($arr);
+// // STRING BUILT-IN FUNCTIONS
+// $name="Manikandan ";
+// echo"$name\n";
+// echo"length: ".strlen($name)."\n";
+// echo"upper: ".strtoupper($name)."\n";
+// echo"lower: ".strtolower($name)."\n"; 
+// echo"trim: ".trim($name)."\n"; 
+// echo"replace: ".str_replace("kandan","sh Pandey",$name)."\n"; 
+// echo"position find: ".strpos($name,"kandan")."\n"; 
+// echo"sub str: ".substr($name,0,4)."\n"; 
+
+// // ARRAY BUILT-IN FUNCTIONS
+// $a=["a","b","c"];
+// echo"implode: ".implode(", ",$a)."\n"; 
+// echo"count: ".count($a)."\n"; 
+// echo"in - array: ".in_array("b",$a)."\n"; 
+// echo"array key exists: ".array_key_exists("seats",$booking)."\n"; 
+// array_pop($a);
+// print_r($a);
+// $b=["d","e","f","a"];
+// $c=array_merge($a,$b);
+// echo"array merge: ".print_r($c)."\n"; 
+// $unique=array_unique($c);
+// echo"uniqu: ";print_r($unique);
+
+// $nums = [1,4,3,42];
+// print_r($nums);
+// $map=array_map(fn($v)=>$v*2,$nums);
+// echo"Map\n";
+// print_r($map);
+// $filter=array_filter($nums,fn($v)=>$v%2==0);
+// echo"Filter\n";
+// print_r($filter);
+// $reduce=array_reduce($nums,fn($total,$value)=>$total+$value,0);
+// echo"Reduce : $reduce\n";
+
+// // MATH BUILT-IN FUNCTIONS
+// echo "absolute : ".abs(-10.5)."\n";
+// echo "round : ".round(10.6)."\n";
+// echo "ceil always upward : ".ceil(10.2)."\n";
+// echo "floor always dounward : ".floor(10.6)."\n";
+// echo "max : ".max(10.6,10,20)."\n";
+// echo "min : ".min(10.6,10,-10,-1)."\n";
+// echo "gettype : ".gettype("hii")."\n";
+// echo "is string : ".is_string("hii")."\n";
+// echo "is int : ".is_int("hii")."\n";
+// echo "is array : ".is_array($booking)."\n";
+// echo "is boolean : ".is_bool(false)."\n";
+// echo "is float : ".is_float(1.5)."\n";
+// echo "is null : ".is_null(null)."\n";
+
+// // DATE TIME
+// echo"date : ".date("d-m-Y")."\n";
+// echo"time : ".time()."\n";
+// echo"str to date : ".strtotime("17 August 2026")."\n";
+// $date=strtotime("17 August 2026");
+// echo"date using timestamp : ".date("d-m-Y",$date)."\n";
+
+// function add($a,$b){
+//     return $a+$b;
+// }
+
+
+// $add = function ($a,$b){
+//     return $a+$b;
+// };
+// echo"Answer: ".$add(2,3);
+
+// $addd=fn($a)=>$a*2;
+
+// echo"result : ".$addd(47);
+
+// pass by value
+// $func=fn($a)=> $a=100;
+// $num = 5;
+// $func($num);
+// echo $num."\n";
+
+// pass by reference
+// $func2=fn(&$a)=> $a=100;
+// $num = 5;
+// $func2($num);
+// echo $num;
+
+//  $booking=[
+//     "movieName"=>"Citizen",
+//     "date"=>"15-08-2026",
+//     "price"=>200,
+//     "seats"=>["A1","A2"]
+// ];
+// print_r($booking);
+// $json=json_encode($booking);
+// echo $json;
+// $array=json_decode($json,true);
+// print_r($array);
+
+// $object=json_decode($json);
+// echo "name:".$object->movieName;
+// echo"\n";
+// echo "Date:".$object->date."\n";
+// echo "Price:".$object->price."\n";
+// print_r($object);
+
+// class Booking{
+//    private string $name;
+//    private int $price;
+//    private String $date;
+
+//    public static $theatre="Vijaya cinema's";
+
+//    public function setName(string $name) {
+//     $this->name= $name;
+//    }
+//    public function setPrice(int $price) {
+//     $this->price= $price;
+//    }
+//    public function setDate(string $date) {
+//     $this->date= $date;
+//    }
+
+//    public function getName(){
+//     return $this->name;
+//    }
+//    public function getPrice(){
+//     return $this->price;
+//    }
+//    public function getDate(){
+//     return $this->date;
+//    }
    
 
 
-   public function __construct(string $name="undefined", int $price=0, String $date="-----"){
-    $this->name= $name;
-    $this->price= $price;
-    $this->date= $date;
-   }
+//    public function __construct(string $name="undefined", int $price=0, String $date="-----"){
+//     $this->name= $name;
+//     $this->price= $price;
+//     $this->date= $date;
+//    }
 
-   function details(){
-    echo"from parent class\n";
-    echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
-  echo "-------------------------------------------------------------------\n";
-    }
+//    function details(){
+//     echo"from parent class\n";
+//     echo   "Name : $this->name \nPrice : $this->price\nDate : $this->date \nThanks for Booking....\n";
+//   echo "-------------------------------------------------------------------\n";
+//     }
 
-}
+// }
 
-class TamilMovie extends Booking{
-    public static function greet(){
-        echo "hii bro ";
-    }
+// class TamilMovie extends Booking{
+//     public static function greet(){
+//         echo "hii bro ";
+//     }
 
-function details(){
-    echo "from child class\n";
-    parent::__construct($this->getName(), $this->getPrice(), $this->getDate());
-    echo   "Name : ".$this->getName()." \nPrice : ".$this->getPrice()."\nDate : ".$this->getDate() ."\nThanks for Booking....\n";
-     echo "-------------------------------------------------------------------\n";
+// function details(){
+//     echo "from child class\n";
+//     parent::__construct($this->getName(), $this->getPrice(), $this->getDate());
+//     echo   "Name : ".$this->getName()." \nPrice : ".$this->getPrice()."\nDate : ".$this->getDate() ."\nThanks for Booking....\n";
+//      echo "-------------------------------------------------------------------\n";
 
-    }
-}
-$booking = new Booking();
-echo  Booking ::$theatre. "\n";
-$booking-> setName( "Eko") ;
-$booking->setPrice( 150) ;
-$booking->setDate("15/08/2026") ;
+//     }
+// }
+// $booking = new Booking();
+// echo  Booking ::$theatre. "\n";
+// $booking-> setName( "Eko") ;
+// $booking->setPrice( 150) ;
+// $booking->setDate("15/08/2026") ;
 
-$booking2 = new Booking();
-$booking2-> setName( "Sprider Man") ;
-$booking2->setPrice( 200) ;
-$booking2->setDate("15/08/2026") ;
+// $booking2 = new Booking();
+// $booking2-> setName( "Sprider Man") ;
+// $booking2->setPrice( 200) ;
+// $booking2->setDate("15/08/2026") ;
 
-$booking3 = new Booking("LEO",120,"14/08/2026");
+// $booking3 = new Booking("LEO",120,"14/08/2026");
 
-$tamilMovie= new TamilMovie("Sitaramam",200,"15/08/2026");
+// $tamilMovie= new TamilMovie("Sitaramam",200,"15/08/2026");
 
-$booking->details();
-$booking2->details();
-$booking3->details();
-$tamilMovie->details();
+// $booking->details();
+// $booking2->details();
+// $booking3->details();
+// $tamilMovie->details();
 
-TamilMovie::greet();
+// TamilMovie::greet();
 
 trait Log{
     public function log(){
