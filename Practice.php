@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // $name = "Manikandan";
 // echo "hi $name \n";
 // for($i=1;$i<=10;$i++){
@@ -314,4 +314,4 @@ $obj= new PaymentGateWay();
 $obj-> log2();
 
 
-?>
+?> -->
