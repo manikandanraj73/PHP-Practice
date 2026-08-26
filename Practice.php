@@ -193,6 +193,8 @@
 // $func=fn($a)=> $a=100;
 // $num = 5;
 // $func($num);
+
+
 // echo $num."\n";
 
 // pass by reference
